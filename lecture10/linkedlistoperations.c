@@ -45,8 +45,15 @@ void insertatfront(){
     temp=(struct node*)malloc(sizeof(struct node));
     printf("enter the data to be added at front\n");
     scanf("%d",&temp->data);
-    temp->link=root;
-    root=temp;
+    if(root==NULL){
+        root=temp;
+    }
+    else{
+        temp->link=root;
+        root=temp;
+
+    }
+    
 
 }
 //priniting linked list
@@ -131,6 +138,7 @@ void deleteatend(){
 
 
 
+
 int main(){
 
     if(isempty()){
@@ -149,9 +157,10 @@ int main(){
     insertatfront();
     insertatfront();
     insertatfront();
-    printf("The linked list formed is as :\n");
 
-    print();
+
+    print(); 
+  
 
     reversell();
     printf("The linked list formed after reverse is as :\n");
@@ -163,31 +172,31 @@ int main(){
 
 
 
-    deleteatfront();
-    deleteatfront();
-    deleteatfront();
-    deleteatend();
+    // deleteatfront();
+    // deleteatfront();
+    // deleteatfront();
+    // deleteatend();
 
 
-    printf("The linked list formed is as :\n");
+    // printf("The linked list formed is as :\n");
 
-    print();
+    // print();
 
 
-    printf("The length of linked list formed is as : %d\n",lengthofll());
+    // printf("The length of linked list formed is as : %d\n",lengthofll());
 
 
     
 
 
-    if(isempty()){
+    // if(isempty()){
 
-        printf("yes linked list is empty\n");
-    }
-    else{
-        printf("no linked list is not empty\n");
+    //     printf("yes linked list is empty\n");
+    // }
+    // else{
+    //     printf("no linked list is not empty\n");
 
-    }
+    // }
 
 
 
